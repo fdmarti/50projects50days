@@ -1,5 +1,3 @@
-import './style.css'
-
 const btnNotificaction = document.querySelector('.btn-notification');
 const notificationsContainer = document.querySelector('.notifications');
 
