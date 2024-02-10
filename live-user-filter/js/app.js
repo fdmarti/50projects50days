@@ -1,6 +1,7 @@
 (() => {
 
     const state = {
+        API_URL: '../public/data/users.json',
         USER_DATA: [],
     }
 
@@ -9,7 +10,7 @@
 
     const loadUserData = async () => {
         showSpinner();
-        const result = await fetch('../public/data/users.json');
+        const result = await fetch(state.API_URL);
         const data = await result.json();
         await hideSpinner();
 
