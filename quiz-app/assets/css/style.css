@@ -1,0 +1,98 @@
+@import url('./fonts.css');
+
+:root {
+	--white: #fff;
+	--bg: #627aff;
+	--bgCard: #c2cbff;
+	--phColor: #525252;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Nunito;
+}
+
+body {
+	background-color: var(--white);
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.quiz {
+	background-color: var(--bgCard);
+	padding: 30px 30px 0 30px;
+	border-radius: 20px;
+	box-shadow: 0px 10px 10px -10px var(--phColor);
+
+	width: 500px;
+	height: 380px;
+	position: relative;
+}
+
+.question {
+	text-align: center;
+	margin: 20px 0;
+	font-size: 28px;
+	height: 70px;
+}
+
+.options {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	margin: 20px;
+}
+
+.group {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	color: var(--phColor);
+	font-size: 20px;
+	font-weight: 800;
+}
+
+input.radio {
+	border: 0px;
+	width: 15px;
+	height: 2em;
+}
+
+label:hover {
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+.submit {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+
+	padding: 20px;
+	font-size: 18px;
+	font-weight: 600;
+	color: var(--white);
+	background-color: var(--bg);
+	border: none;
+	border-radius: 0 0 20px 20px;
+}
+
+.submit:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+	main {
+		padding: 0 20px;
+	}
+	.quiz {
+		width: 100%;
+	}
+}
