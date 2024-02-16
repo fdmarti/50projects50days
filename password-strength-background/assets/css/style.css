@@ -1,0 +1,91 @@
+@import url('./fonts.css');
+
+:root {
+	--white: #fff;
+	--bg: #627aff;
+	--bgCard: #f0f2fa;
+	--phColor: #525252;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Nunito;
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.background-image {
+	background: url('../images/background-image.webp') center/cover no-repeat;
+	min-height: 100vh;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
+	filter: blur(10px);
+}
+
+.form {
+	background-color: var(--white);
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 15px;
+}
+
+.form h3 {
+	font-size: 30px;
+}
+
+.form p {
+	font-size: 15px;
+	opacity: 0.6;
+	margin-bottom: 10px;
+}
+
+.form .form-group {
+	display: flex;
+	flex-direction: column;
+	gap: 0.4rem;
+	margin: 10px 0;
+	width: 100%;
+}
+
+input {
+	padding: 10px;
+	border: none;
+	border-radius: 10px;
+	background-color: var(--bgCard);
+	font-size: 15px;
+}
+
+input:focus {
+	outline: solid 1px var(--bg);
+}
+
+.btn {
+	margin-top: 20px;
+	width: 100%;
+	padding: 8px;
+	border: none;
+	border-radius: 10px;
+	background-color: #627aff;
+	color: var(--white);
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 15px;
+}
+
+.btn:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
