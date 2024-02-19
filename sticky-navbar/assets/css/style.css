@@ -1,0 +1,164 @@
+@import url('./fonts.css');
+
+:root {
+	--white: #fff;
+	--bg: #627aff;
+	--bgCard: #f0f2fa;
+	--phColor: #222;
+	--hoverColor: #c0392b;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Nunito;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	min-height: 100vh;
+	position: relative;
+}
+
+a {
+	text-decoration: none;
+	color: var(--white);
+	font-weight: 600;
+	font-size: 19px;
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-around;
+	background-color: var(--phColor);
+	padding: 20px;
+	align-items: center;
+	color: var(--white);
+
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+	transition: all 0.3s ease-in-out;
+}
+
+.menu ul {
+	display: flex;
+	gap: 1rem;
+}
+
+.menu ul li {
+	list-style: none;
+}
+
+.title a {
+	font-size: 24px;
+}
+
+.navbar h2:hover,
+.navbar a:hover {
+	cursor: pointer;
+	color: var(--hoverColor);
+}
+
+.selected {
+	color: var(--hoverColor);
+}
+
+.hero {
+	background: url('../images/background.webp') center/cover no-repeat;
+	height: 100vh;
+	width: 100%;
+	z-index: -2;
+	position: relative;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.hero::before {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: rgba(34, 34, 34, 0.5);
+	top: 0;
+	left: 0;
+	content: '';
+	z-index: -1;
+}
+
+h1 {
+	font-size: 50px;
+	margin-bottom: 10px;
+}
+
+.hero p,
+h1 {
+	color: var(--white);
+}
+
+.hero p {
+	font-size: 20px;
+}
+
+.content {
+	margin: 30px auto;
+	max-width: 1100px;
+	padding: 20px;
+	display: flex;
+	gap: 2rem;
+	flex-direction: column;
+}
+
+.sub-content h3 {
+	font-size: 32px;
+}
+
+.sub-content p {
+	margin-top: 10px;
+	letter-spacing: 1px;
+	font-size: 20px;
+}
+
+.active {
+	background-color: var(--white);
+	color: var(--phColor);
+	height: 15px;
+}
+
+.active a:not(.selected) {
+	color: var(--phColor);
+}
+
+.services {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.service {
+	display: flex;
+	align-items: center;
+	gap: 3rem;
+	max-width: 700px;
+	margin: 20px 0;
+}
+
+.service img {
+	width: 200px;
+	border-radius: 50%;
+	box-shadow: 0 10px 10px -10px var(--phColor);
+}
+
+.service img:hover{
+	opacity: .9;
+}
+
+

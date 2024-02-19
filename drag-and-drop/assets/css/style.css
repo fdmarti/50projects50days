@@ -1,0 +1,52 @@
+@import url('./fonts.css');
+
+:root {
+	--white: #fff;
+	--bg: #627aff;
+	--bgCard: #f0f2fa;
+	--phColor: #525252;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Nunito;
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	background-color: var(--bgCard);
+}
+
+.blocks {
+	display: flex;
+	gap: 5rem;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.block {
+	height: 200px;
+	width: 200px;
+	background-color: var(--bg);
+}
+
+.fill {
+	background: url('../images/background-image.webp') center/cover no-repeat;
+	height: 100%;
+	width: 100%;
+}
+
+.fill:hover {
+	cursor: grab;
+	opacity: 0.8;
+}
+
+.hold {
+	background: none;
+}
